@@ -265,61 +265,9 @@ class SortComparison {
 
 
 	public static void main(String[] args) {
-		List<Double> list = new ArrayList<Double>();
-		try {
-			File myObj = new File("C:\\Users\\DELL\\Dropbox\\ads\\week6\\numbers100.txt");
-			Scanner myReader = new Scanner(myObj);
-			while (myReader.hasNextLine()) {
-				String data = myReader.nextLine();
-				list.add(Double.valueOf(data));
-			}
-			myReader.close();
-
-		} catch (FileNotFoundException e) {
-			System.out.println("An error occurred.");
-			e.printStackTrace();
-		}
-		Double[] newlist = new Double[list.size()];
-		list.toArray(newlist);
-		Double[] list1 = newlist;
-		Double[] list2 = newlist;
-		Double[] list3 = newlist;
-		Double[] list4 = newlist;
-		Double[] list5 = newlist;
-		long startTime;
-		long endTime;
-		long totalTime;
-		startTime = System.nanoTime();
-		newlist= insertionSort(list1);
-		endTime   = System.nanoTime();
-		totalTime = endTime - startTime;
-		System.out.println("insertionSort "+totalTime);
-		startTime = System.nanoTime();
-		newlist= selectionSort(list2);
-		endTime   = System.nanoTime();
-		totalTime = endTime - startTime;
-		System.out.println("selectionSort "+totalTime);
-		startTime = System.nanoTime();
-		newlist= quickSort(list3);
-		endTime   = System.nanoTime();
-		totalTime = endTime - startTime;
-		System.out.println("quickSort "+totalTime);
-		startTime = System.nanoTime();
-		newlist= mergeSortIterative(list4);
-		endTime   = System.nanoTime();
-		totalTime = endTime - startTime;
-		System.out.println("mergeSortIterative "+totalTime);
-		startTime = System.nanoTime();
-		newlist= mergeSortRecursive(list5);
-		endTime   = System.nanoTime();
-		totalTime = endTime - startTime;
-		System.out.println("mergeSortRecursive "+totalTime);
-		//System.out.println("排好序的数组：");
-		//for (double e : newlist)
-			//System.out.println(e+" ");
-	}
+		
 
 	//todo: do experiments as per assignment instructions
 }
-
+}
 //end class

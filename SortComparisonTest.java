@@ -48,97 +48,145 @@ public class SortComparisonTest {
 
 	@Test
 	public void insertionSortTest() {
-		Double[] arr = {13.0, 7.0, 6.0, 45.0, 21.0, 9.0, 101.0, 102.0,13.0};  
+		Double[] arr = {2377.88,2910.66,8458.14,1522.08,5855.37,1934.75,8106.23,1735.31,4849.83,1518.63,
+				3669.57,4917.36,9100.94,2652.57,8931.88,2203.51,6317.98,5710.77,3321.58,1044.55,5029.31,
+				5673.94,8541.65,401.409,1080.22,6393.96,131.11,7201.84,1018.14,4829.45,2543.55,6766.97,
+				8967.82,7598.96,7202.92,9076.23,9286.11,3776.63,8997.56,7788.8,3242.55,1942.31,9955.53,
+				1612.96,7080.34,5015.19,9363.01,7163.23,1051.9,2092.05,5593.97,7054.32,782.337,5105.3,1961.97,
+				2742.11,6386.02,4482.08,398.718,4672.51,777.565,381.004,1600.44,3978.32,6888.98,};    
 		Double[] tmp = arr;
 		Arrays.sort(arr);
 		tmp = SortComparison.insertionSort(tmp);
 		assertArrayEquals("insertionSort",arr,tmp);
+		Double[] arr2 = {};
+		tmp = arr2;
+		Arrays.sort(arr2);
+		tmp = SortComparison.mergeSortRecursive(tmp);
+		assertArrayEquals("mergeSortRecursive",arr2,tmp);
 	}
 	@Test
 	public void selectionSortTest() {
-		Double[] arr = {13.0, 7.0, 6.0, 45.0, 21.0, 9.0, 101.0, 102.0,13.0};  
+		Double[] arr = {2377.88,2910.66,8458.14,1522.08,5855.37,1934.75,8106.23,1735.31,4849.83,1518.63,
+				3669.57,4917.36,9100.94,2652.57,8931.88,2203.51,6317.98,5710.77,3321.58,1044.55,5029.31,
+				5673.94,8541.65,401.409,1080.22,6393.96,131.11,7201.84,1018.14,4829.45,2543.55,6766.97,
+				8967.82,7598.96,7202.92,9076.23,9286.11,3776.63,8997.56,7788.8,3242.55,1942.31,9955.53,
+				1612.96,7080.34,5015.19,9363.01,7163.23,1051.9,2092.05,5593.97,7054.32,782.337,5105.3,1961.97,
+				2742.11,6386.02,4482.08,398.718,4672.51,777.565,381.004,1600.44,3978.32,6888.98,};   
 		Double[] tmp = arr;
 		Arrays.sort(arr);
 		tmp = SortComparison.selectionSort(tmp);
 		assertArrayEquals("selectionSort",arr,tmp);
+		Double[] arr2 = {};
+		tmp = arr2;
+		Arrays.sort(arr2);
+		tmp = SortComparison.mergeSortRecursive(tmp);
+		assertArrayEquals("mergeSortRecursive",arr2,tmp);
 	}
 	@Test
 	public void quickSortTest() {
-		Double[] arr = {13.0, 7.0, 6.0, 45.0, 21.0, 9.0, 101.0, 102.0,13.0};  
+		Double[] arr = {2377.88,2910.66,8458.14,1522.08,5855.37,1934.75,8106.23,1735.31,4849.83,1518.63,
+				3669.57,4917.36,9100.94,2652.57,8931.88,2203.51,6317.98,5710.77,3321.58,1044.55,5029.31,
+				5673.94,8541.65,401.409,1080.22,6393.96,131.11,7201.84,1018.14,4829.45,2543.55,6766.97,
+				8967.82,7598.96,7202.92,9076.23,9286.11,3776.63,8997.56,7788.8,3242.55,1942.31,9955.53,
+				1612.96,7080.34,5015.19,9363.01,7163.23,1051.9,2092.05,5593.97,7054.32,782.337,5105.3,1961.97,
+				2742.11,6386.02,4482.08,398.718,4672.51,777.565,381.004,1600.44,3978.32,6888.98,};  
 		Double[] tmp = arr;
 		Arrays.sort(arr); 
 		tmp = SortComparison.quickSort(tmp);
 		assertArrayEquals("quickSort",arr,tmp);
+		Double[] arr2 = {};
+		tmp = arr2;
+		Arrays.sort(arr2);
+		tmp = SortComparison.mergeSortRecursive(tmp);
+		assertArrayEquals("mergeSortRecursive",arr2,tmp);
 	}
 	@Test
 	public void mergeSortIterativeTest() {
-		Double[] arr = {13.0, 7.0, 6.0, 45.0, 21.0, 9.0, 101.0, 102.0,13.0};  
+		Double[] arr = {2377.88,2910.66,8458.14,1522.08,5855.37,1934.75,8106.23,1735.31,4849.83,1518.63,
+				3669.57,4917.36,9100.94,2652.57,8931.88,2203.51,6317.98,5710.77,3321.58,1044.55,5029.31,
+				5673.94,8541.65,401.409,1080.22,6393.96,131.11,7201.84,1018.14,4829.45,2543.55,6766.97,
+				8967.82,7598.96,7202.92,9076.23,9286.11,3776.63,8997.56,7788.8,3242.55,1942.31,9955.53,
+				1612.96,7080.34,5015.19,9363.01,7163.23,1051.9,2092.05,5593.97,7054.32,782.337,5105.3,1961.97,
+				2742.11,6386.02,4482.08,398.718,4672.51,777.565,381.004,1600.44,3978.32,6888.98,};  
 		Double[] tmp = arr;
 		Arrays.sort(arr); 
 		tmp = SortComparison.mergeSortIterative(tmp);
 		assertArrayEquals("mergeSortIterative",arr,tmp);
+		Double[] arr2 = {};
+		tmp = arr2;
+		Arrays.sort(arr2);
+		tmp = SortComparison.mergeSortRecursive(tmp);
+		assertArrayEquals("mergeSortRecursive",arr2,tmp);
 	}
 	@Test
 	public void mergeSortRecursiveTest() {
-		Double[] arr = {13.0, 7.0, 6.0, 45.0, 21.0, 9.0, 101.0, 102.0,13.0};  
+		Double[] arr = {2377.88,2910.66,8458.14,1522.08,5855.37,1934.75,8106.23,1735.31,4849.83,1518.63,
+				3669.57,4917.36,9100.94,2652.57,8931.88,2203.51,6317.98,5710.77,3321.58,1044.55,5029.31,
+				5673.94,8541.65,401.409,1080.22,6393.96,131.11,7201.84,1018.14,4829.45,2543.55,6766.97,
+				8967.82,7598.96,7202.92,9076.23,9286.11,3776.63,8997.56,7788.8,3242.55,1942.31,9955.53,
+				1612.96,7080.34,5015.19,9363.01,7163.23,1051.9,2092.05,5593.97,7054.32,782.337,5105.3,1961.97,
+				2742.11,6386.02,4482.08,398.718,4672.51,777.565,381.004,1600.44,3978.32,6888.98,};  
 		Double[] tmp = arr;
 		Arrays.sort(arr); 
 		tmp = SortComparison.mergeSortRecursive(tmp);
 		assertArrayEquals("mergeSortRecursive",arr,tmp);
+		Double[] arr2 = {};
+		tmp = arr2;
+		Arrays.sort(arr2);
+		tmp = SortComparison.mergeSortRecursive(tmp);
+		assertArrayEquals("mergeSortRecursive",arr2,tmp);
 	}
-	public static void main(String[] args) {
-		List<Double> list = new ArrayList<Double>();
-		try {
-			File myObj = new File("C:\\Users\\DELL\\Dropbox\\ads\\week6\\numbersSorted1000.txt");
-			Scanner myReader = new Scanner(myObj);
-			while (myReader.hasNextLine()) {
-				String data = myReader.nextLine();
-				list.add(Double.valueOf(data));
-			}
-			myReader.close();
-
-		} catch (FileNotFoundException e) {
-			System.out.println("An error occurred.");
-			e.printStackTrace();
-		}
-		Double[] newlist = new Double[list.size()];
-		list.toArray(newlist);
-		Double[] list1 = newlist;
-		Double[] list2 = newlist;
-		Double[] list3 = newlist;
-		Double[] list4 = newlist;
-		Double[] list5 = newlist;
-		long startTime;
-		long endTime;
-		long totalTime;
-		startTime = System.nanoTime();
-		newlist= SortComparison.insertionSort(list1);
-		endTime   = System.nanoTime();
-		totalTime = endTime - startTime;
-		System.out.println("insertionSort "+totalTime);
-		startTime = System.nanoTime();
-		newlist= SortComparison.selectionSort(list2);
-		endTime   = System.nanoTime();
-		totalTime = endTime - startTime;
-		System.out.println("selectionSort "+totalTime);
-		startTime = System.nanoTime();
-		newlist= SortComparison.quickSort(list3);
-		endTime   = System.nanoTime();
-		totalTime = endTime - startTime;
-		System.out.println("quickSort "+totalTime);
-		startTime = System.nanoTime();
-		newlist= SortComparison.mergeSortIterative(list4);
-		endTime   = System.nanoTime();
-		totalTime = endTime - startTime;
-		System.out.println("mergeSortIterative "+totalTime);
-		startTime = System.nanoTime();
-		newlist= SortComparison.mergeSortRecursive(list5);
-		endTime   = System.nanoTime();
-		totalTime = endTime - startTime;
-		System.out.println("mergeSortRecursive "+totalTime);
-
-		//System.out.println("排好序的数组：");
-		//for (double e : newlist)
-		//System.out.println(e+" ");
-	}
+//	public static void main(String[] args) {
+//		List<Double> list = new ArrayList<Double>();
+//		try {
+//			File myObj = new File("C:\\Users\\DELL\\Dropbox\\ads\\week6\\numbersSorted1000.txt");
+//			Scanner myReader = new Scanner(myObj);
+//			while (myReader.hasNextLine()) {
+//				String data = myReader.nextLine();
+//				list.add(Double.valueOf(data));
+//			}
+//			myReader.close();
+//
+//		} catch (FileNotFoundException e) {
+//			System.out.println("An error occurred.");
+//			e.printStackTrace();
+//		}
+//		Double[] newlist = new Double[list.size()];
+//		list.toArray(newlist);
+//		Double[] list1 = newlist;
+//		Double[] list2 = newlist;
+//		Double[] list3 = newlist;
+//		Double[] list4 = newlist;
+//		Double[] list5 = newlist;
+//		long startTime;
+//		long endTime;
+//		long totalTime;
+//		startTime = System.nanoTime();
+//		newlist= SortComparison.insertionSort(list1);
+//		endTime   = System.nanoTime();
+//		totalTime = endTime - startTime;
+//		System.out.println("insertionSort "+totalTime);
+//		startTime = System.nanoTime();
+//		newlist= SortComparison.selectionSort(list2);
+//		endTime   = System.nanoTime();
+//		totalTime = endTime - startTime;
+//		System.out.println("selectionSort "+totalTime);
+//		startTime = System.nanoTime();
+//		newlist= SortComparison.quickSort(list3);
+//		endTime   = System.nanoTime();
+//		totalTime = endTime - startTime;
+//		System.out.println("quickSort "+totalTime);
+//		startTime = System.nanoTime();
+//		newlist= SortComparison.mergeSortIterative(list4);
+//		endTime   = System.nanoTime();
+//		totalTime = endTime - startTime;
+//		System.out.println("mergeSortIterative "+totalTime);
+//		startTime = System.nanoTime();
+//		newlist= SortComparison.mergeSortRecursive(list5);
+//		endTime   = System.nanoTime();
+//		totalTime = endTime - startTime;
+//		System.out.println("mergeSortRecursive "+totalTime);
+//
+//		
+//	}
 }
